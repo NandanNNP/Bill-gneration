@@ -96,13 +96,13 @@ print("\t-----------------------------------------------------------------------
 for i in product_list:
     if i["gift"] == "y":
         gift= gift + 1 * i["quantity"] # gift wrapping charge is 1 per item 
-    print(f'\t{i["name"]} \t {i["price"]}  \t x\t {i["quantity"]}\t\t {"Yes" if i["gift"] == "y" else "No"} \t\t {i["total"]}')
+    print(f'\t{i["name"]} \t {i["price"]}$  \t x\t {i["quantity"]}\t\t {"Yes" if i["gift"] == "y" else "No"} \t\t {i["total"]}$')
 print("\t------------------------------------------------------------------------")
-print("\tSub total: \t\t\t\t\t\t\t", cart_total) 
+print(f"\tSub total: \t\t\t\t\t\t\t {cart_total}") 
 print("\t------------------------------------------------------------------------")
-print(f"\tApplied coupon: {discount_name} \t\t\t\t -{dicount_value}") 
-print(f"\tGift charge: \t\t\t\t\t\t\t +{gift}") 
-print(f"\tShipping charge: \t\t\t\t\t\t +{shipping}") 
+print(f"\tApplied coupon: {discount_name} \t\t\t\t -{dicount_value}$") 
+print(f"\tGift charge: \t\t\t\t\t\t\t +{gift}$") 
+print(f"\tShipping charge: \t\t\t\t\t\t +{shipping}$") 
 print("\t------------------------------------------------------------------------")
-print(f"\tGrand Total: \t\t\t\t\t\t\t -{cart_total + shipping + gift - dicount_value}")
+print(f"\tGrand Total: \t\t\t\t\t\t\t -{cart_total + shipping + gift - dicount_value}$")
 print("\t------------------------------------------------------------------------")
